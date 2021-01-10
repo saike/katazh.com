@@ -79,7 +79,7 @@ export default {
   }
 
   .audio-player {
-    background-color: rgba(0,0,0,0.23);
+    background-color: rgba(0,0,0,0.23) !important;
   }
 
 </style>
