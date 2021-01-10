@@ -4,22 +4,18 @@
       <v-flex class="katazh-title text-center">₭АTАѪ</v-flex>
       <v-flex class="text-center">
         <div class="text-center white--text">
-          <v-btn icon outlined @click="autoplay = true; current = current-1 < 0 ? tracks.length-1 : current-1;">
-            <v-icon>mdi-skip-backward</v-icon>
-          </v-btn>
-          <span class="body-2 mx-4">{{ tracks[current].title }}</span>
-          <v-btn icon outlined @click="autoplay = true; current = current+1 > tracks.length-1 ? 0 : current+1;">
-            <v-icon>mdi-skip-forward</v-icon>
-          </v-btn>
+          
         </div>
-        <VuetifyAudio :file="tracks[current].url" class="audio-player" :ended="() => { autoplay = true; current = current+1 > tracks.length-1 ? 0 : current+1; }" downloadable flat :auto-play="autoplay"/>  
+        <AudioPlayer :playlist="tracks"/>
+        <!-- <VuetifyAudio :file="tracks[current].url" class="audio-player" :ended="() => { autoplay = true; current = current+1 > tracks.length-1 ? 0 : current+1; }" downloadable flat :auto-play="autoplay"/>   -->
       </v-flex>
     </v-col>
   </v-row>
 </template>
 
 <script>
-import VuetifyAudio from 'vuetify-audio';
+// import VuetifyAudio from 'vuetify-audio';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const tracks = [
   {
@@ -51,7 +47,7 @@ const tracks = [
 
 export default {
   components: {
-    VuetifyAudio
+    AudioPlayer
   },
   data(){
 
