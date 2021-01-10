@@ -3,11 +3,16 @@
     <v-col cols="12">
       <v-flex class="katazh-title text-center">₭АTАѪ</v-flex>
       <v-row justify="center">
-        <v-card width="400px" flat class="audio-player">
-          <v-card-text>
+        <v-card width="450px" max-width="90vw" flat class="audio-player">
+          <v-card-text class="px-6">
             <AudioPlayer :playlist="tracks"/>
           </v-card-text>
         </v-card>
+      </v-row>
+      <v-row class="mt-9" justify="center">
+        <a href="https://t.me/katazh" target="_blank">
+          <v-img :src="require('@/assets/img/join-us-on-telegram-button-icon.png')" width="200px" contain></v-img>
+        </a>
       </v-row>
     </v-col>
   </v-row>
@@ -67,14 +72,14 @@ export default {
 
     font-family: sans-serif;
     font-size: 25vw;
-    opacity: 0.3;
+    opacity: 0.6;
     color: #fff; 
     line-height: 1 !important;
 
   }
 
   .audio-player {
-    background-color: transparent !important;
+    background-color: rgba(0,0,0,0.23);
   }
 
 </style>
