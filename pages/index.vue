@@ -2,13 +2,13 @@
   <v-row justify="center" align="center">
     <v-col cols="12">
       <v-flex class="katazh-title text-center">₭АTАѪ</v-flex>
-      <v-flex class="text-center">
-        <div class="text-center white--text">
-          
-        </div>
-        <AudioPlayer :playlist="tracks"/>
-        <!-- <VuetifyAudio :file="tracks[current].url" class="audio-player" :ended="() => { autoplay = true; current = current+1 > tracks.length-1 ? 0 : current+1; }" downloadable flat :auto-play="autoplay"/>   -->
-      </v-flex>
+      <v-row justify="center">
+        <v-card width="400px" flat class="audio-player">
+          <v-card-text>
+            <AudioPlayer :playlist="tracks"/>
+          </v-card-text>
+        </v-card>
+      </v-row>
     </v-col>
   </v-row>
 </template>

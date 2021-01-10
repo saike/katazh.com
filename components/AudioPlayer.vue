@@ -1,6 +1,6 @@
 <template>
   
-  <v-flex class="flex-column justify-center">
+  <v-flex class="flex-column justify-center text-center">
 
     <v-flex class="mb-2">
       <span class="body-2 mx-4">{{ playlist[current] && playlist[current].title || 'Playlist is empty' }}</span>
@@ -46,6 +46,9 @@
       </v-btn>
       <v-btn class="ma-1" icon outlined v-if="playlist.length > 1" @click="next">
         <v-icon>mdi-skip-forward</v-icon>
+      </v-btn>   
+      <v-btn class="ma-1" icon outlined @click="download" :href="playlist[current].url" download>
+        <v-icon>mdi-download</v-icon>
       </v-btn>
     </v-flex>
 
